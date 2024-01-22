@@ -1,0 +1,433 @@
+@font-face {
+  font-family: "CeraPro-Light";
+  src: url(../fonts/CeraPro-Light.ttf);
+}
+@font-face {
+  font-family: "CeraPro-Medium";
+  src: url(../fonts/CeraPro-Medium.ttf);
+}
+@font-face {
+  font-family: "CeraPro-Regular";
+  src: url(../fonts/CeraPro-Regular.ttf);
+}
+@font-face {
+  font-family: "CeraPro-Bold";
+  src: url(../fonts/CeraPro-Bold.ttf);
+}
+* {
+  margin: 0;
+  scroll-behavior: smooth;
+  padding: 0;
+  box-sizing: border-box;
+  max-width: 100%;
+  outline: none;
+  text-decoration: none;
+  font-family: "CeraPro-Medium";
+}
+
+body,
+html {
+  color: #013133;
+  height: 100%;
+  background-color: #023134;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100%;
+}
+
+.container {
+  max-width: 1240px;
+  margin: auto;
+  width: 95%;
+}
+
+header {
+  padding: 20px 0px;
+}
+header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+header .container .header__logo {
+  font-size: 24px;
+  color: #fff;
+  font-family: "CeraPro-Bold";
+  letter-spacing: 1px;
+}
+header .container .nav {
+  display: flex;
+  align-items: center;
+  gap: 45px;
+}
+header .container .nav a {
+  color: rgba(255, 255, 255, 0.8);
+  display: inline-flex;
+}
+header .container .nav a.btn {
+  font-family: "CeraPro-Bold";
+  background: linear-gradient(180deg, #f48f19 0%, #f47719 100%);
+  padding: 10px 25px;
+  color: #fff;
+  border-radius: 8px;
+}
+header .container .nav .nav__support {
+  display: flex;
+  gap: 15px;
+}
+header .container .nav .nav__support img {
+  height: 35px;
+  width: 35px;
+}
+header .container .nav .nav__support .nav__support-contact p {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.8);
+}
+header .container .nav .nav__support .nav__support-contact a {
+  color: #fff;
+  font-family: "CeraPro-Bold";
+  margin-top: 3px;
+}
+
+main {
+  margin: 45px 0px;
+}
+main .container {
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+}
+
+.login-form form {
+  gap: 15px;
+  max-width: 600px;
+}
+.login-form form h3 {
+  font-size: 24px;
+}
+.login-form form button {
+  width: 200px;
+}
+
+.order-form form {
+  padding: 48px;
+  border-radius: 24px;
+  background: linear-gradient(0deg, #b2e7b4 0%, #6dcd94 100%);
+  width: 80%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+}
+.order-form form .form__header {
+  text-align: center;
+}
+.order-form form .form__header h2 {
+  font-size: 36px;
+}
+.order-form form .form__header p {
+  font-size: 16px;
+}
+.order-form form .form__fields {
+  margin: 60px 0px 30px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+.order-form form .form__fields .form__field:nth-child(3) {
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+.order-form form .form__fields .form__field:nth-child(4) {
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+.order-form form .form__fields .select {
+  position: relative;
+}
+.order-form form .form__fields .select .select-list {
+  position: absolute;
+  background-color: #fff;
+  width: 100%;
+  top: 55px;
+  display: none;
+  border: 1px solid silver;
+  border-radius: 12px;
+  z-index: 10;
+}
+.order-form form .form__fields .select .select-list.active {
+  display: block;
+}
+.order-form form .form__fields .select .select-list p {
+  padding: 12px;
+}
+.order-form form .form__fields .select.select-value {
+  display: flex;
+}
+.order-form form .form__fields .select.select-value .select-show {
+  width: 150px;
+  border-radius: 12px 0px 0px 12px;
+  border-right: 1px solid #b2e7b4;
+}
+.order-form form .form__fields .select.select-value input {
+  border-radius: 0px 12px 12px 0px;
+}
+.order-form form .form__fields .select-show {
+  border-radius: 12px;
+  height: 56px;
+  width: 100%;
+  border: none;
+  padding: 0px 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 15px;
+  background-color: #fff;
+  position: relative;
+}
+.order-form form .form__fields .select-show p:first-child {
+  font-size: 12px;
+}
+.order-form form .form__fields .select-show p:nth-child(2) {
+  font-family: "CeraPro-Bold";
+}
+.order-form form .form__fields .select-show .select-show__arrow {
+  position: absolute;
+  right: 15px;
+  display: flex;
+  align-items: center;
+}
+
+form.main-form {
+  padding: 48px;
+  border-radius: 24px;
+  background: linear-gradient(0deg, #b2e7b4 0%, #6dcd94 100%);
+  width: 80%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+}
+form.main-form.add {
+  margin-top: 50px;
+  gap: 12px;
+  max-width: 600px;
+}
+form.main-form select {
+  border-radius: 12px;
+  height: 56px;
+  width: 100%;
+  border: none;
+  padding: 0px 15px;
+  font-size: 15px;
+}
+form.main-form input {
+  border-radius: 12px;
+  height: 56px;
+  width: 100%;
+  border: none;
+  padding: 0px 15px;
+  font-size: 15px;
+}
+form.main-form input.invalid {
+  border: 2.5px solid tomato;
+}
+form.main-form input::-moz-placeholder {
+  color: #081720;
+}
+form.main-form input::placeholder {
+  color: #081720;
+}
+form.main-form button {
+  height: 52px;
+  border-radius: 8px;
+  border: none;
+  font-family: "CeraPro-Bold";
+  font-size: 20px;
+  color: #fff;
+  background-color: #081720;
+  width: 100%;
+}
+
+.reviews__wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 40px;
+}
+.reviews__wrapper .review {
+  background-color: #f3fff4;
+  padding: 25px;
+  border-radius: 12px;
+  color: #081720;
+}
+.reviews__wrapper .review .reviews__header .name__wrapper {
+  display: flex;
+  gap: 10px;
+}
+.reviews__wrapper .review .reviews__header .name__wrapper .name {
+  width: 40px;
+  height: 40px;
+  border: 1px solid #9C9C9C;
+  border-radius: 100%;
+  background: linear-gradient(180deg, #f48f19 0%, #f47719 100%);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "CeraPro-Bold";
+  font-size: 16px;
+}
+.reviews__wrapper .review .reviews__header .name__wrapper .full-name p:last-child {
+  font-family: "CeraPro-Bold";
+}
+.reviews__wrapper .review .reviews__header .name__wrapper .full-name p:nth-child(2) {
+  color: #9E9E9E;
+  font-size: 12px;
+}
+.reviews__wrapper .review .reviews__header .name__wrapper .full-name .rating {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-top: 10px;
+}
+.reviews__wrapper .review .review__txt {
+  margin-top: 10px;
+}
+
+.faq_block {
+  color: #fff;
+}
+.faq_block.active .faq_block-content {
+  display: block;
+}
+.faq_block + .faq_block {
+  margin-top: 20px;
+}
+.faq_block .faq_block-header {
+  font-size: 24px;
+  display: flex;
+  cursor: pointer;
+  align-items: center;
+  gap: 15px;
+}
+.faq_block .faq_block-header .faq-header__plus {
+  height: 40px;
+  width: 40px;
+  border-radius: 100%;
+  background: linear-gradient(180deg, #f48f19 0%, #f47719 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.faq_block .faq_block-header .faq-header__plus p {
+  font-size: 36px;
+}
+.faq_block .faq_block-content {
+  margin-top: 20px;
+  display: none;
+}
+.faq_block .faq_block-content p {
+  font-size: 15px;
+  font-family: "CeraPro-Light";
+}
+
+.section-title {
+  font-size: 36px;
+  color: #fff;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+footer {
+  background-color: #081720;
+  color: #fff;
+}
+footer .container {
+  padding: 40px;
+}
+footer .container .footer__txt {
+  font-size: 12px;
+  text-align: center;
+}
+
+.admin-wrapper {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  min-height: 100%;
+}
+
+.admin-nav {
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.admin-nav a {
+  padding: 10px 20px;
+  display: inline-flex;
+  color: #013133;
+}
+.admin-nav .admin-nav__main {
+  display: flex;
+  flex-direction: column;
+}
+.admin-nav .admin-mav__bottom a {
+  color: tomato;
+}
+
+.admin-main {
+  padding: 40px;
+  color: #fff;
+}
+.admin-main h3 {
+  font-size: 30px;
+}
+.admin-main table {
+  margin-top: 30px;
+  width: 100%;
+  border-collapse: collapse;
+}
+.admin-main table tr:first-child td {
+  font-family: "CeraPro-Bold";
+}
+.admin-main table tr td {
+  border: 1px solid #fff;
+  padding: 10px;
+}
+.admin-main table tr td a {
+  color: #fff;
+}
+
+.admin-main__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.admin-main__header .filter a.btn {
+  background-color: #fff;
+  color: #013133;
+  padding: 8px 12px;
+  display: inline-flex;
+  border-radius: 5px;
+}
+.admin-main__header .filter form {
+  display: flex;
+  align-items: end;
+  gap: 20px;
+}
+.admin-main__header .filter form .filter-block p {
+  font-size: 12px;
+  margin-bottom: 4px;
+}
+.admin-main__header .filter form .filter-block input,
+.admin-main__header .filter form .filter-block select {
+  height: 20px;
+}
+
+#location, #giveCurrency, #receiveCurrency {
+  height: auto;
+  padding: 0;
+  font-family: "CeraPro-Bold";
+}/*# sourceMappingURL=index.css.map */
